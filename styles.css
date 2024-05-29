@@ -1,0 +1,412 @@
+:root {
+    --primary-21-color: #212121;
+    --primary-green-color: #2cc245;
+    --primary-white-color: #fff;
+    --primary-black-color: #000;
+    --primary-blue-color: #307CF9;
+    --primary-border-color: #ddd;
+    --primary-background-color: #151515;
+    --primary-orange-color: rgb(255, 101, 91);
+    --primary-C-orange-color: rgb(255, 125, 73);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #303030;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+
+body {
+    margin: 4% auto;
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 5px;
+    font-size: 1.8rem;
+    background-color: var(--primary-background-color);
+    display: flex;
+    justify-content: space-around;
+}
+
+.calculator {
+    width: 455px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    padding-right: 17px;
+    text-align: center;
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid #797979;
+    border-radius: 3px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.input {
+    width: 415px;
+    border: 1px solid var(--primary-border-color);
+    border-radius: 3px;
+    min-height: 55px;
+    height: auto;
+    margin-left: 1px;
+    padding: 10px 15px 10px 15px;
+    text-align: right;
+    font-size: 2.5rem;
+    overflow-x: auto;
+    transition: all .2s ease-in-out;
+    color: var(--primary-white-color);
+    word-wrap: break-word;
+}
+
+.input:hover {
+    border: 1px solid #bbb;
+    -webkit-box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.buttons {
+    width: 453px;
+}
+
+.TopPanel div {
+    display: inline-block;
+    justify-content: space-between;
+    border: 1px solid var(--primary-green-color);
+    border-radius: 3px;
+    width: 80px;
+    padding: 10px;
+    margin: 20px 0px 10px 0;
+    cursor: pointer;
+    color: var(--primary-green-color);
+    background-color: var(--primary-21-color);
+    transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+}
+
+.TopPanel div:last-child {
+    margin-right: 0;
+}
+
+.TopPanel div:hover {
+    background-color: var(--primary-21-color);
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    border-color: #aaa;
+}
+
+.TopPanel div:active {
+    font-weight: bold;
+}
+
+.RightPanel div:active {
+    font-weight: bold;
+}
+
+.equal:active {
+    font-weight: bold;
+}
+
+.NumPad {
+    display: inline-block;
+    justify-content: space-between;
+}
+
+.numbers div {
+    display: inline-block;
+    justify-content: space-between;
+    border: 1px solid var(--primary-border-color);
+    border-radius: 3px;
+    color: #fff;
+    width: 80px;
+    padding: 10px;
+    margin: 10px 0px 10px 0;
+    cursor: pointer;
+    background-color: var(--primary-21-color);
+    transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+}
+
+.numbers div:nth-child(3), :nth-child(6), :nth-child(9) {
+    margin-right: 0;
+}
+
+
+
+.numbers div:hover {
+    background-color: var(--primary-21-color);
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    border-color: #bbb;
+}
+
+.numbers div:active {
+    font-weight: bold;
+}
+
+#zero {
+    width: 75px;
+    padding: 10px 70px;
+    margin-right: 0;
+    margin-left: 0px;
+}
+
+#dot {
+    margin-right: 0;
+}
+
+.RightPanel {
+    display: inline-block;
+    width: 102px;
+    vertical-align: top;
+    cursor: pointer;
+    color: var(--primary-21-color);
+    transition: all .2s ease-in-out;
+}
+
+.RightPanel > div {
+    display: inline-block;
+    border: 1px solid var(--primary-green-color);
+    border-radius: 3px;
+    width: 80px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0px 10px 0;
+    cursor: pointer;
+    background-color: var(--primary-21-color);
+    color: var(--primary-green-color);
+    transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+}
+
+
+div.equal {
+    display: inline-block;
+    border: 1px solid #3079ED;
+    border-radius: 3px;
+    text-align: center;
+    padding: 48px 10px;
+    margin: 10px 6px 10px 0;
+    vertical-align: top;
+    cursor: pointer;
+    color: var(--primary-white-color);
+    background-color: #4d90fe;
+}
+
+div.equal:hover {
+    background-color: var(--primary-blue-color);
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    border-color: #1857BB;
+}
+
+div.equal:active {
+    font-weight: bold;
+}
+
+#clear {
+    border: 1px solid var(--primary-C-orange-color);
+    color: var(--primary-C-orange-color);
+}
+
+#clear:hover {
+    background-color: var(--primary-C-orange-color);
+    color: rgb(245, 245, 245);
+}
+
+#delete {
+    background-color: var(--primary-background-color);
+    border: 1px solid var(--primary-orange-color);
+    color: var(--primary-orange-color);
+}
+
+#delete:hover {
+    color: rgb(245, 245, 245);
+    background-color: var(--primary-orange-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ---...--- */
+
+
+#exchangeRates {
+    height: 100px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 7px;
+    color: #f5f5f5;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 1px rgba(53, 53, 53, 0.1);
+}
+
+#exchangeRates p {
+    margin: 0 0 10px;
+}
+
+#exchangeRates p span {
+    font-weight: bold;
+    color: #43ff62;
+}
+
+
+
+
+.currency-converter {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #797979;
+    border-radius: 7px;
+    width: 590px;
+    height: 116px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.currency-top {
+    display: flex;
+}
+
+.currency-bottom {
+    display: flex;
+}
+
+
+#fromCurrency {
+    width: 45%;
+    height: 45px;
+    margin: 0;
+    padding-left: 10px;
+    border: 0;
+    font-weight: bold;
+    color: #f5f5f5;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#toCurrency {
+    width: 45%;
+    margin: 0;
+    padding-left: 10px;
+    border: 0;
+    font-weight: bold;
+    color: #f5f5f5;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#fromCurrency:focus,
+#fromCurrency:hover,
+#fromCurrency:active {
+    outline: none;
+    border: none;
+
+}
+
+
+#toCurrency:focus,
+#toCurrency:hover,
+#toCurrency:active {
+    outline: none;
+    border: none;
+}
+
+
+#swapCurrencies {
+    margin: 0;
+    width: 10%;
+    border: 0;
+    border-right: 1px solid #797979;
+    border-left: 1px solid #797979;
+    color: #43ff62;
+    font-size: 15px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#amount {
+    width: 50%;
+    height: 70px;
+    margin: 0;
+    padding: 0;
+    padding-left: 15px;
+    border: 0;
+    border-top: 1px solid #797979;
+    border-right: 1px solid #797979;
+    color: #f5f5f5;
+    font-weight: 500;
+    font-size: 15px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#amount:focus {
+    outline: none;
+    border: 0;
+    border-top: 1px solid #797979;
+    border-right: 1px solid #797979;
+}
+
+
+#convertedResult {
+    width: 50%;
+    background-color: #fff;
+    border: 0;
+    border-top: 1px solid #797979;
+    padding-left: 15px;
+    color: #f5f5f5;
+    font-weight: 500;
+    font-size: 15px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#convertedResult:focus {
+    outline: none;
+    border: 0;
+    border-top: 1px solid #797979;
+}
+
+
+
+
+
+
+select {
+    width: 200px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+option {
+    padding: 5px;
+
+    font-size: 14px;
+    color: rgb(245, 245, 245);
+    background-color: var(--primary-21-color);
+}
+
+
+option:checked {
+    background-color: #0e7920;
+    color: #fff;
+}
+
+
